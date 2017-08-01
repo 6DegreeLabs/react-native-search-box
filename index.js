@@ -274,7 +274,8 @@ class Search extends Component {
                 style={
                     [
                         styles.container,
-                        this.props.backgroundColor && { backgroundColor: this.props.backgroundColor }
+                        this.props.backgroundColor && { backgroundColor: this.props.backgroundColor },
+						this.props.containerHeight && {height:this.props.containerHeight}
                     ]}
                 onLayout={this.onLayout}
             >
@@ -286,6 +287,7 @@ class Search extends Component {
                         this.props.inputStyle && this.props.inputStyle,
                         this.props.inputHeight && { height: this.props.inputHeight },
                         this.props.inputBorderRadius && { borderRadius: this.props.inputBorderRadius },
+						this.props.containerHeight && {height:this.props.containerHeight-10},
                         {
                             width: this.inputFocusWidthAnimated,
                             paddingLeft: this.inputFocusPlaceholderAnimated
@@ -296,7 +298,7 @@ class Search extends Component {
                             shadowOpacity: this.shadowOpacityAnimated,
                             shadowRadius: this.props.shadowRadius,
                         },
-
+                        this.props.fontSize && {fontSize:this.props.fontSize},
                     ]}
                     editable={this.props.editable}
                     value={this.state.keyword}
@@ -330,7 +332,8 @@ class Search extends Component {
                                 this.props.tintColorSearch && { tintColor: this.props.tintColorSearch },
                                 {
                                     left: this.iconSearchAnimated,
-                                }
+                                },
+								this.props.containerHeight && {flex:0,height:(this.props.containerHeight/2)-10, width:(this.props.containerHeight/2)-10, top:(this.props.containerHeight/2+10)/2},
                             ]}
                         />
                     )}
@@ -353,7 +356,8 @@ class Search extends Component {
                                 styles.iconDeleteDefault,
                                 this.props.tintColorDelete && { tintColor: this.props.tintColorDelete },
                                 this.props.positionRightDelete && { right: this.props.positionRightDelete },
-                                { opacity: this.iconDeleteAnimated }
+                                { opacity: this.iconDeleteAnimated },
+                                this.props.containerHeight && {flex:0,height:(this.props.containerHeight/2)-10, width:(this.props.containerHeight/2)-10, top:(this.props.containerHeight/2+10)/2},
                             ]}
                         />
                     )}
