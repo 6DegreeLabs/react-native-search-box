@@ -290,7 +290,7 @@ class Search extends Component {
 						this.props.containerHeight && {height:this.props.containerHeight-10},
                         {
                             width: this.inputFocusWidthAnimated,
-                            paddingLeft: this.inputFocusPlaceholderAnimated
+                            paddingLeft: 25
                         },
                         this.props.shadowVisible && {
                             shadowOffset: { width: this.props.shadowOffsetWidth, height: this.shadowHeight },
@@ -331,7 +331,7 @@ class Search extends Component {
                                 styles.iconSearchDefault,
                                 this.props.tintColorSearch && { tintColor: this.props.tintColorSearch },
                                 {
-                                    left: this.iconSearchAnimated,
+                                    left: 10,
                                 },
 								this.props.containerHeight && {flex:0,height:(this.props.containerHeight/2)-10, width:(this.props.containerHeight/2)-10, top:(this.props.containerHeight/2+10)/2},
                             ]}
