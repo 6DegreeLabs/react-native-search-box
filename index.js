@@ -358,7 +358,7 @@ class Search extends Component {
                                 this.props.tintColorDelete && { tintColor: this.props.tintColorDelete },
                                 this.props.positionRightDelete && { right: this.props.positionRightDelete },
                                 { opacity: this.iconDeleteAnimated },
-                                this.props.containerHeight && {flex:0,height:(this.props.containerHeight/2)-10, width:(this.props.containerHeight/2)-10, top:(this.props.containerHeight/2+10)/2},
+                                this.props.containerHeight && {flex:0,height:(this.props.containerHeight/2)-5, width:(this.props.containerHeight/2)-5, top:((this.props.containerHeight/2+10)/2)-2},
                             ]}
                         />
                     )}
