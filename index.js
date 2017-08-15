@@ -303,7 +303,7 @@ class Search extends Component {
                     editable={this.props.editable}
                     value={this.state.keyword}
                     onChangeText={this.onChangeText}
-                    placeholder={this.placeholder}
+                    placeholder={this.props.placeholder}
                     placeholderTextColor={this.props.placeholderTextColor || styles.placeholderColor}
                     onSubmitEditing={this.onSearch}
                     autoCorrect={false}
